@@ -10,6 +10,7 @@ from mergeSort import mergeSort
 from pesquisaBinaria import iterativeBinarySearch
 from pesquisaSequencial import scanSequencial
 from quickSort import quickSort
+from quickSort import partition
 from quickSort import recursiveQuickSort
 from selectSort import selectSort
 from troca import swap
