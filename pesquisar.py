@@ -12,7 +12,7 @@ from tratamentoDados import *
 
 #Pesquisa
     #Em Lista Desordenada
-buscaDesordenadaGrande = str(buscaEmDesordenacao.find(listaNumericaDesordenadoGrande, 839))
+buscaDesordenadaGrande = str(buscaEmDesordenacao.find(array, 839))
 with open('./resultado/buscaEmDesordenacao/resultadoBuscaDesordenadoGrande.txt', 'w') as arquivo:
     arquivo.write(buscaDesordenadaGrande)
 

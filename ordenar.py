@@ -18,10 +18,10 @@ from tratamentoDados import *
 
 # BubbleSort
     #Arquivo Desordenado Grande
-bubbleSort.bubbleSort(listaNumericaDesordenadoGrande)
+bubbleSort.bubbleSort(array)
 
-listaStringBubbleSortGrande = str(listaNumericaDesordenadoGrande)
-valoresOrdenadosBubbleSortGrande = ', '.join(str(valor) for valor in listaNumericaDesordenadoGrande)
+listaStringBubbleSortGrande = str(array)
+valoresOrdenadosBubbleSortGrande = ', '.join(str(valor) for valor in array)
 with open('./resultado/bubbleSort/conteudoDesordenadoGrande.txt', 'w') as arquivo:
     arquivo.write(valoresOrdenadosBubbleSortGrande)
 
@@ -74,10 +74,10 @@ with open('./resultado/bubbleSort/conteudoDesordenadoPequenoNegativo.txt', 'w') 
 
 # HeapSort
     #Arquivo Desordenado Grande
-heapSort.heapSort(listaNumericaDesordenadoGrande)
+heapSort.heapSort(array)
 
-listaStringHeapSortGrande = str(listaNumericaDesordenadoGrande)
-valoresOrdenadosHeapSortGrande = ', '.join(str(valor) for valor in listaNumericaDesordenadoGrande)
+listaStringHeapSortGrande = str(array)
+valoresOrdenadosHeapSortGrande = ', '.join(str(valor) for valor in array)
 with open('./resultado/heapSort/conteudoDesordenadoGrande.txt', 'w') as arquivo:
     arquivo.write(valoresOrdenadosHeapSortGrande)
 
@@ -129,10 +129,10 @@ with open('./resultado/heapSort/conteudoDesordenadoPequenoNegativo.txt', 'w') as
 
 # InsertSort
     #Arquivo Desordenado Grande
-insertSort.insertSort(listaNumericaDesordenadoGrande)
+insertSort.insertSort(array)
 
-listaStringInsertSortGrande = str(listaNumericaDesordenadoGrande)
-valoresOrdenadosInsertSortGrande = ', '.join(str(valor) for valor in listaNumericaDesordenadoGrande)
+listaStringInsertSortGrande = str(array)
+valoresOrdenadosInsertSortGrande = ', '.join(str(valor) for valor in array)
 with open('./resultado/insertSort/conteudoDesordenadoGrande.txt', 'w') as arquivo:
     arquivo.write(valoresOrdenadosInsertSortGrande)
 
@@ -184,10 +184,10 @@ with open('./resultado/insertSort/conteudoDesordenadoPequenoNegativo.txt', 'w') 
 
 # MergeSort
     #Arquivo Desordenado Grande
-mergeSort.mergeSort(listaNumericaDesordenadoGrande)
+mergeSort.mergeSort(array)
 
-listaStringMergeSortGrande = str(listaNumericaDesordenadoGrande)
-valoresOrdenadosMergeSortGrande = ', '.join(str(valor) for valor in listaNumericaDesordenadoGrande)
+listaStringMergeSortGrande = str(array)
+valoresOrdenadosMergeSortGrande = ', '.join(str(valor) for valor in array)
 with open('./resultado/mergeSort/conteudoDesordenadoGrande.txt', 'w') as arquivo:
     arquivo.write(valoresOrdenadosMergeSortGrande)
 
@@ -240,10 +240,10 @@ with open('./resultado/mergeSort/conteudoDesordenadoPequenoNegativo.txt', 'w') a
 
 # QuickSort
     #Arquivo Desordenado Grande
-quickSort.quickSort(listaNumericaDesordenadoGrande)
+quickSort.quickSort(array)
 
-listaStringQuickSortGrande = str(listaNumericaDesordenadoGrande)
-valoresOrdenadosQuickSortGrande = ', '.join(str(valor) for valor in listaNumericaDesordenadoGrande)
+listaStringQuickSortGrande = str(array)
+valoresOrdenadosQuickSortGrande = ', '.join(str(valor) for valor in array)
 with open('./resultado/quickSort/conteudoDesordenadoGrande.txt', 'w') as arquivo:
     arquivo.write(valoresOrdenadosQuickSortGrande)
 
@@ -295,10 +295,10 @@ with open('./resultado/quickSort/conteudoDesordenadoPequenoNegativo.txt', 'w') a
 
 # SelectSort
     #Arquivo Desordenado Grande
-selectSort.selectSort(listaNumericaDesordenadoGrande)
+selectSort.selectSort(array)
 
-listaStringSelectSortGrande = str(listaNumericaDesordenadoGrande)
-valoresOrdenadosSelectSortGrande = ', '.join(str(valor) for valor in listaNumericaDesordenadoGrande)
+listaStringSelectSortGrande = str(array)
+valoresOrdenadosSelectSortGrande = ', '.join(str(valor) for valor in array)
 with open('./resultado/selectSort/conteudoDesordenadoGrande.txt', 'w') as arquivo:
     arquivo.write(valoresOrdenadosSelectSortGrande)
 
