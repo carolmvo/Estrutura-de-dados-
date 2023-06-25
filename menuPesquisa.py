@@ -47,7 +47,7 @@ def menu_internoPesquisa(array):
             execucaoPesquisaBinaria(array, num)
             print("Pesquisa sequencial:")
             execucaoPesquisaSequencial(array, num)
-        elif selecao == '3': 
+        elif selecaoPesquisa == '3': 
             print("Voltando ao menu principal")
             break
         else:
