@@ -3,7 +3,9 @@ from tratamentoDados import *
 from fila import Queue
 from filaDuasExtremidades import Deque
 from pilha import Stack
-stack = Stack
+stack = Stack()
+queue = Queue()
+deque = Deque()
 
 def menu_internoLista(array):
     while True:
@@ -38,19 +40,28 @@ def menu_internoPilha(array):
         print("3. Voltar ao menu anterior")
         selecaoPilha = input("Escolha uma opção: ")
         if selecaoPilha == '1':
+            stack = Stack()
             print("Você escolheu adicionar a pilha")
             num = int(input("Digite o número que quer incrementar a pilha "))
             inicio_sequencial = time.time()
-            vetor = stack.push(num)
+            for j in vetor:
+                stack.push(j)
+            stack.push(num)
             fim_sequencial = time.time()
             tempo_sequencial = fim_sequencial - inicio_sequencial
-            print (vetor)
+            print (stack.items)
             print(f"O tempo de execução foi de {tempo_sequencial}")
         elif selecaoPilha == '2':
+            stack = Stack()
+            i = 0
             print("Você escolheu remover da pilha")
+            for j in vetor:
+                stack.push(j)
+            numPop = int(input("Quantos elementos deseja remover? "))
             inicio_sequencial = time.time()
-            for j in len(array):
-                vetor = Stack.pop(array[j])
+            while i < numPop:
+                stack.pop()
+                i+=1
             fim_sequencial = time.time()
             tempo_sequencial = fim_sequencial - inicio_sequencial
             print (vetor)
@@ -64,31 +75,39 @@ def menu_internoPilha(array):
 
 def menu_internoFila(array):
     while True:
-        vetor = []
+        vetor = array
         print("Escolha uma opção: ")
         print("1. Adicionar a fila")
         print("2. Excluir da fila")
         print("3. Voltar ao menu anterior")
         selecaoPilha = input("Escolha uma opção: ")
         if selecaoPilha == '1':
+            queue = Queue()
             print("Você escolheu adicionar a fila")
+            num = int(input("Digite o número que quer incrementar a fila "))
             inicio_sequencial = time.time()
-            for j in len(array):
-                vetor = Queue.enqueue()
-                j+=1
+            for j in vetor:
+                queue.enqueue(j)
+            queue.enqueue(num)
             fim_sequencial = time.time()
             tempo_sequencial = fim_sequencial - inicio_sequencial
-            print (vetor)
+            print (queue.items)
             print(f"O tempo de execução foi de {tempo_sequencial}")
         elif selecaoPilha == '2':
+            queue = Queue()
+            x = 0
             print("Você escolheu remover da fila")
+            for j in vetor:
+                queue.enqueue(j)
+            print (queue.items)
+            numDeq = int(input("Quantos elementos deseja remover? "))
             inicio_sequencial = time.time()
-            for j in len(array):
-                vetor = Queue.dequeue(j)
-                j+=1
+            while x < numDeq:
+                queue.dequeue()
+                x+=1
             fim_sequencial = time.time()
             tempo_sequencial = fim_sequencial - inicio_sequencial
-            print (vetor)
+            print (queue.items)
             print(f"O tempo de execução foi de {tempo_sequencial}")
         elif selecaoPilha == '3':
             print("Voltando ao menu Listas")
@@ -99,7 +118,7 @@ def menu_internoFila(array):
 
 def menu_internoFilaDuasExt(array):
      while True:
-        vetor = []
+        vetor = array
         print("Escolha uma opção: ")
         print("1. Adicionar a fila pela frente")
         print("2. Adicionar a fila por trás")
@@ -108,44 +127,63 @@ def menu_internoFilaDuasExt(array):
         print("5. Voltar ao menu anterior")
         selecaoPilha = input("Escolha uma opção: ")
         if selecaoPilha == '1':
+            deque = Deque()
+            j = 0
             print("Você escolheu adicionar a fila pela frente")
+            num = int(input("Digite o número que quer incrementar a fila "))
             inicio_sequencial = time.time()
-            for j in len(array):
-                vetor = Deque.addFront
-                j+=1
+            for j in vetor:
+                deque.addFront(j)
+            deque.addFront(num)
             fim_sequencial = time.time()
             tempo_sequencial = fim_sequencial - inicio_sequencial
-            print (vetor)
+            print (deque.items)
             print(f"O tempo de execução foi de {tempo_sequencial}")
         elif selecaoPilha == '2':
+            deque = Deque()
+            j = 0
             print("Você escolheu adicionar a fila por trás")
+            num = int(input("Digite o número que quer incrementar a fila "))
             inicio_sequencial = time.time()
-            for j in len(array):
-                vetor = Deque.addRear
-                j+=1
+            for j in vetor:
+                deque.addRear(j)
+            deque.addRear(num)
             fim_sequencial = time.time()
             tempo_sequencial = fim_sequencial - inicio_sequencial
-            print (vetor)
+            print (deque.items)
             print(f"O tempo de execução foi de {tempo_sequencial}")
         elif selecaoPilha == '3':
+            deque = Deque()
+            i = 0
+            j = 0
             print("Você escolheu remover da pilha pela frente")
+            for j in vetor:
+                deque.addFront(j)
+            print(deque.items)
+            num = int(input("Digite quantos elementos quer remover a fila da fila pela frente "))
             inicio_sequencial = time.time()
-            for j in len(array):
-                vetor = Deque.removeFront()
-                j+=1
+            while i < num:
+                deque.removeFront()
+                i+=1
             fim_sequencial = time.time()
             tempo_sequencial = fim_sequencial - inicio_sequencial
             print (vetor)
             print(f"O tempo de execução foi de {tempo_sequencial}")
         elif selecaoPilha == '4':
+            deque = Deque()
+            i = 0
             print("Você escolheu remover da pilha por trás")
+            for j in vetor:
+                deque.addFront(j)
+            print(deque.items)
+            num = int(input("Digite quantos elementos quer remover a fila da fila por trás "))
             inicio_sequencial = time.time()
-            for j in len(array):
-                vetor = Deque.removeRear()
-                j+=1
+            while i < num:
+                deque.removeRear()
+                i+=1
             fim_sequencial = time.time()
             tempo_sequencial = fim_sequencial - inicio_sequencial
-            print (vetor)
+            print (deque.items)
             print(f"O tempo de execução foi de {tempo_sequencial}")
         elif selecaoPilha == '5':
             print("Voltando ao menu Listas")

@@ -29,8 +29,8 @@ def rotacao_esquerda(nodo):
 
 def rotacao_direita(nodo):
     nova_raiz = nodo.esquerda
-    nodo.direita = nova_raiz.esquerda
-    nova_raiz.esquerda = nodo
+    nodo.esquerda = nova_raiz.direita
+    nova_raiz.direita = nodo
     nodo.altura = max(altura_nodo(nodo.esquerda), altura_nodo(nodo.direita))+1
     nova_raiz.altura = max(altura_nodo(nova_raiz.esquerda), nodo.altura)+1
     return nova_raiz
@@ -76,21 +76,19 @@ def em_ordem(raiz):
     em_ordem(raiz.direita)
 
 
-# print("__________________________")
-# elementoBusca = [-50, 54, 71, 19, 100]
-# arr = [22, 63, 54, 71, 19, 37]
+print("__________________________")
+elementoBusca = [-50, 54, 71, 19, 100]
+arr = [22, 63, 54, 71, 19, 37]
 
-# raiz = None
-# for i in arr:
-#     raiz = inserir(raiz, NodoAVL(i))
+raiz = None
+for i in arr:
+    raiz = inserir(raiz, NodoAVL(i))
 
-# print(em_ordem(raiz))
-
-# print(em_ordem(raiz))
-# for i in elementoBusca:
-#     resultado = busca(raiz, i)
-#     if resultado is not None:
-#         print(f"Elemento {i} encontrado na árvore.")
-#     else:
-#         print(f"Elemento {i} não encontrado na árvore.")
+print(em_ordem(raiz))
+for i in elementoBusca:
+    resultado = busca(raiz, i)
+    if resultado is not None:
+        print(f"Elemento {i} encontrado na árvore.")
+    else:
+        print(f"Elemento {i} não encontrado na árvore.")
 

@@ -4,7 +4,7 @@ def insertSort(alist):
     N = len(alist)
     for i in range(1,N):
         aux = alist[i]
-        j-=1
+        j = i-1
         while(j >= 0 and alist[j] >= aux):
             alist[j+1] = alist[j]
             j -= 1

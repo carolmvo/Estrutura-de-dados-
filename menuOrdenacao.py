@@ -23,6 +23,7 @@ def execucaoBubblueSort(array):
     print("_____________________________________")
 
 def execucaoHeapSort(array):
+    inicio_sequencial = time.time()
     heapSort.heapSort(array)
     valoresOrdenadosHeapSortGrande = ', '.join(str(valor) for valor in array)
     fim_sequencial = time.time()
