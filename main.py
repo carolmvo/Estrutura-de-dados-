@@ -10,9 +10,21 @@ def home():
 def ordenacao():
     return render_template('ordenacao.html')
 
-@app.route('/fila')
-def fila():
-    return render_template('fila.html')
+@app.route('/matriz')
+def matriz():
+    return render_template('matriz.html')
+
+@app.route('/arquivos')
+def arquivos():
+    return render_template('arquivos.html')
+
+@app.route('/arvore')
+def arvore():
+    return render_template('arvore.html')
+
+@app.route('/pesquisa')
+def pesquisa():
+    return render_template('pesquisa.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
