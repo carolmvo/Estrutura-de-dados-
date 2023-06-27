@@ -21,6 +21,7 @@ from menuOrdenacao import *
 from menuPesquisa import *
 from menuMatriz import *
 from menuArquivos import *
+from menuArvore import *
 
 
 def exibir_menu():
@@ -57,8 +58,40 @@ def processar_opcao(opcao):
         menu_internoPesquisa(array)
     elif opcao == "5":
         print("Opção 5 - Árvore selecionada.")
+        array = menu_internoArquivos()
+        menu_internoArvore(array)
     elif opcao == "6":
         print("Opção 6 selecionada.")
+        print("Selecione duas estruturas para comparar seus desempenhos")
+        while True:
+            array = menu_internoArquivos()
+            print("Opção 1: Executar a árvore binária de pesquisa")
+            print("Opção 2: Executar a árvore AVL")
+            print("Opção 3: Executar a pesquisa binária ")
+            print("Opção 4: Executar a pesquisa sequencial")
+            print("Opção 5: Voltar ao menu inicial")
+            selecaoMista1 = input("Escolha uma opção: ")
+            selecaoMista2 = input("Escolha outra opção: ")
+            num = int(input("Digite o número que deseja procurar "))
+            if selecaoMista1 == '1' or selecaoMista2 == '1':
+                print("Árvore Binária de Busca:")
+                arvoreBinaria(array, num)
+            if selecaoMista1 == '2' or selecaoMista2 == '2':
+                print("Árvore AVL:")
+                arvore_AVL(array, num)
+            if selecaoMista1 == '3' or selecaoMista2 == '3':
+                print("Pesquisa binária:")
+                execucaoPesquisaBinaria(array, num)
+            if selecaoMista1 == '4' or selecaoMista2 == '4':
+                print("Pesquisa sequencial:")
+                execucaoPesquisaSequencial(array, num)
+            if selecaoMista1 == '5' or selecaoMista2 == '5':
+                print("Voltando ao menu principal")
+                break
+            else:
+                print("Opção inválida. Por favor, escolha uma opção válida.")
+            return True
+        
     elif opcao == "7":
         print("Saindo...")
         return False

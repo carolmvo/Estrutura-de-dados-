@@ -11,7 +11,7 @@ def em_ordem(raiz):
     if not raiz:
         return
     em_ordem(raiz.esquerda)
-    print(raiz.chave)
+    print(raiz.chave, end=" ")
     em_ordem(raiz.direita)
 
 def insere(raiz, nodo):
@@ -37,19 +37,3 @@ def busca(raiz, chave):
     if raiz.chave < chave:
         return busca(raiz.direita, chave)
     return busca(raiz.esquerda, chave)
-
-
-'''Copiar para implementação de busca'''
-arr = [22, 63, 54, 71, 19, 37]
-raiz = NodoArvore(40)
-for chave in arr:
-    nodo = NodoArvore(chave)
-    insere(raiz, nodo)
-
-elementoBusca = [-50, 54, 71, 19, 100]
-for chave in elementoBusca:
-    resultado = busca(raiz, chave)
-    if resultado:
-        print("Busca pela chave {}: Sucesso!".format(chave))
-    else:
-        print("Busca pela chave {}: Falha!".format(chave))

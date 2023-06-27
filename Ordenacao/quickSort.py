@@ -30,6 +30,3 @@ def partition (alist, posMin, posMax):
         if(i>=j):break
     swap(alist, posMin, j)
     return j
-
-list1 = [2,5,9,22,1]
-print(quickSort(list1))

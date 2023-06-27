@@ -7,8 +7,3 @@ def bubbleSort (alist):
             if alist[i] > alist[i+1]:
                 swap(alist, i, i+1)
     return alist
-
-# a= [2,5,9,22,1]
-
-# res = bubbleSort(a)
-# print(res)

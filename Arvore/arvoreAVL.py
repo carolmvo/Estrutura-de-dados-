@@ -66,29 +66,3 @@ def busca(raiz, chave):
     if raiz.chave < chave:
         return busca(raiz.direita, chave)
     return busca(raiz.esquerda, chave)
-
-
-def em_ordem(raiz):
-    if not raiz:
-        return
-    em_ordem(raiz.esquerda)
-    print(raiz.chave)
-    em_ordem(raiz.direita)
-
-
-print("__________________________")
-elementoBusca = [-50, 54, 71, 19, 100]
-arr = [22, 63, 54, 71, 19, 37]
-
-raiz = None
-for i in arr:
-    raiz = inserir(raiz, NodoAVL(i))
-
-print(em_ordem(raiz))
-for i in elementoBusca:
-    resultado = busca(raiz, i)
-    if resultado is not None:
-        print(f"Elemento {i} encontrado na árvore.")
-    else:
-        print(f"Elemento {i} não encontrado na árvore.")
-

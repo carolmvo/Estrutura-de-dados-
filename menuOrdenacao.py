@@ -11,75 +11,69 @@ import selectSort
 from tratamentoDados import *
 
 def execucaoBubblueSort(array):
-    inicio_sequencial = time.time()
+    inicio_sequencialBubbleSort = time.time()
     bubbleSort.bubbleSort(array)
     valoresOrdenadosBubbleSortGrande = ', '.join(str(valor) for valor in array)
-    fim_sequencial = time.time()
-    tempo_sequencial = fim_sequencial - inicio_sequencial
+    fim_sequencialBubbleSort = time.time()
+    tempo_sequencialBubbleSort = fim_sequencialBubbleSort - inicio_sequencialBubbleSort
     print("_____________________________________")
     print(f"O resultado da ordenação foi: {valoresOrdenadosBubbleSortGrande}")
-    print("_____________________________________")
-    print(f"O tempo de ordenação foi: {tempo_sequencial}")
+    print(f"O tempo de ordenação foi: {tempo_sequencialBubbleSort}")
     print("_____________________________________")
 
 def execucaoHeapSort(array):
-    inicio_sequencial = time.time()
+    inicio_sequencialHeapSort = time.time()
     heapSort.heapSort(array)
     valoresOrdenadosHeapSortGrande = ', '.join(str(valor) for valor in array)
-    fim_sequencial = time.time()
-    tempo_sequencial = fim_sequencial - inicio_sequencial
+    fim_sequencialHeapSort = time.time()
+    tempo_sequencialHeapSort = fim_sequencialHeapSort - inicio_sequencialHeapSort
     print("_____________________________________")
     print(f"O resultado da ordenação foi: {valoresOrdenadosHeapSortGrande}")
-    print("_____________________________________")
-    print(f"O tempo de ordenação foi: {tempo_sequencial}")
+    print(f"O tempo de ordenação foi: {tempo_sequencialHeapSort}")
     print("_____________________________________")
 
 def execucaoInsertSort(array):
-    inicio_sequencial = time.time()
+    inicio_sequencialInsertSort = time.time()
     insertSort.insertSort(array)
     valoresOrdenadosInsertSortGrande = ', '.join(str(valor) for valor in array)
-    fim_sequencial = time.time()
-    tempo_sequencial = fim_sequencial - inicio_sequencial
+    fim_sequencialInsertSort = time.time()
+    tempo_sequencialInsertSort = fim_sequencialInsertSort - inicio_sequencialInsertSort
     print("_____________________________________")
     print(f"O resultado da ordenação foi: {valoresOrdenadosInsertSortGrande}")
-    print("_____________________________________")
-    print(f"O tempo de ordenação foi: {tempo_sequencial}")
+    print(f"O tempo de ordenação foi: {tempo_sequencialInsertSort}")
     print("_____________________________________")
 
 def execucaoMergeSort(array):
-    inicio_sequencial = time.time()
+    inicio_sequencialMergeSort = time.time()
     mergeSort.mergeSort(array)
     valoresOrdenadosMergeSortGrande = ', '.join(str(valor) for valor in array)
-    fim_sequencial = time.time()
-    tempo_sequencial = fim_sequencial - inicio_sequencial
+    fim_sequencialMergeSort = time.time()
+    tempo_sequencialMergeSort = fim_sequencialMergeSort - inicio_sequencialMergeSort
     print("_____________________________________")
     print(f"O resultado da ordenação foi: {valoresOrdenadosMergeSortGrande}")
-    print("_____________________________________")
-    print(f"O tempo de ordenação foi: {tempo_sequencial}")
+    print(f"O tempo de ordenação foi: {tempo_sequencialMergeSort}")
     print("_____________________________________")
 
 def execucaoQuickSort(array):
-    inicio_sequencial = time.time()
+    inicio_sequencialQuickSort = time.time()
     quickSort.quickSort(array)
     valoresOrdenadosQuickSortGrande = ', '.join(str(valor) for valor in array)
-    fim_sequencial = time.time()
-    tempo_sequencial = fim_sequencial - inicio_sequencial
+    fim_sequencialQuickSort = time.time()
+    tempo_sequencialQuickSort = fim_sequencialQuickSort - inicio_sequencialQuickSort
     print("_____________________________________")
     print(f"O resultado da ordenação foi: {valoresOrdenadosQuickSortGrande}")
-    print("_____________________________________")
-    print(f"O tempo de ordenação foi: {tempo_sequencial}")
+    print(f"O tempo de ordenação foi: {tempo_sequencialQuickSort}")
     print("_____________________________________")
 
 def execucaoSelectSort(array):
-    inicio_sequencial = time.time()
+    inicio_sequencialSelectSort = time.time()
     selectSort.selectSort(array)
     valoresOrdenadosSelectSortGrande = ', '.join(str(valor) for valor in array)
-    fim_sequencial = time.time()
-    tempo_sequencial = fim_sequencial - inicio_sequencial
+    fim_sequencialSelectSort = time.time()
+    tempo_sequencialSelectSort = fim_sequencialSelectSort - inicio_sequencialSelectSort
     print("_____________________________________")
     print(f"O resultado da ordenação foi: {valoresOrdenadosSelectSortGrande}")
-    print("_____________________________________")
-    print(f"O tempo de ordenação foi: {tempo_sequencial}")
+    print(f"O tempo de ordenação foi: {tempo_sequencialSelectSort}")
     print("_____________________________________")
 
 def menu_internoOrdenacao(array):

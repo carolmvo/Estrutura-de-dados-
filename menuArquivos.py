@@ -26,7 +26,7 @@ def menu_internoArquivos():
             with open('./txt/arquivo desordenado pequeno.txt', 'r') as arquivo:
                 num = arquivo.read()
             valoresDesordenadoPequeno = num.split(',')
-            array = [(valor.strip()) for valor in valoresDesordenadoPequeno]
+            array = [int(valor.strip()) for valor in valoresDesordenadoPequeno]
             return array
         elif selecaoArquivo == '3':
             with open('./txt/arquivo ordenado grande.txt', 'r') as arquivo:
