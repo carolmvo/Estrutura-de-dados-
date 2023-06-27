@@ -10,5 +10,9 @@ def home():
 def ordenacao():
     return render_template('ordenacao.html')
 
+@app.route('/fila')
+def fila():
+    return render_template('fila.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
